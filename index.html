@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor</title>
+    <link rel="stylesheet" href="https://manuellpz.github.io/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h2>Convertidor de Monedas</h2>
+    <hr>
+    <div class="contenedor">
+        <input type="text" class="form-control" id="cantidad" placeholder="Ingresa El Valor: ">
+        <select id="opciones" class="form-control">
+            <option value="mxyen">MXN/Yen</option>
+            <option value="yenmx">Yen/MXN</option>
+            <option value="mxdolar">MXN/USD</option>
+            <option value="dolarmx">USD/MXN</option>
+            <option value="mxwon">MXN/WON</option>
+            <option value="wonmx">WON/MXN</option>
+        </select>
+        <input type="button" id="convertir" class="btn btn-warning" value="Convertir">
+        <br>
+        <input type="text" class="form-control" id="resultado" placeholder="Resultado: " readonly>
+        
+    </div>
+
+    <script src="funciones.js"></script>
+</body>
+</html>
