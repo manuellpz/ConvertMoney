@@ -4,26 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertidor</title>
-    <link rel="stylesheet" href="https://manuellpz.github.io/bootstrap.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/43104a89d2.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h2>Convertidor de Monedas</h2>
+    <h1>Conversion Monetaria</h1>
     <hr>
-    <div class="contenedor">
-        <input type="text" class="form-control" id="cantidad" placeholder="Ingresa El Valor: ">
-        <select id="opciones" class="form-control">
-            <option value="mxyen">MXN/Yen</option>
-            <option value="yenmx">Yen/MXN</option>
-            <option value="mxdolar">MXN/USD</option>
-            <option value="dolarmx">USD/MXN</option>
-            <option value="mxwon">MXN/WON</option>
-            <option value="wonmx">WON/MXN</option>
-        </select>
-        <input type="button" id="convertir" class="btn btn-warning" value="Convertir">
-        <br>
-        <input type="text" class="form-control" id="resultado" placeholder="Resultado: " readonly>
-        
+
+    <div class="main_container">
+        <div class="form_container">
+                <input type="text" id="txtFirstValue">
+                <select id="firstOption">
+                    <option value="USD">USD</option>
+                    <option value="MXN">MXN</option>
+                    <option value="JPY">YEN</option>
+                    <option value="EUR">EUR</option>
+                    <option value="KRW">WON</option>
+                </select>
+                <br>
+                <input type="text" id="txtSecondValue" readonly>
+                <select id="secondOption">
+                    <option value="MXN">MXN</option>
+                    <option value="USD">USD</option>
+                    <option value="JPY">YEN</option>
+                    <option value="EUR">EUR</option>
+                    <option value="KRW">WON</option>
+                </select>
+        </div>
     </div>
 
     <script src="funciones.js"></script>
