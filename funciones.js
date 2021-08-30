@@ -11,9 +11,110 @@ firstValue.addEventListener('input',(e) => {
     .then(response => response.json())
     .then(data => {
         const currencies = data.rates
-        if(firstOption.value == 'USD' && secondOption.value == 'MXN')
+
+        if(firstOption.value == secondOption.value)
         {
-            result = (e.target.value * currencies.MXN).toFixed(2)
+            result = e.target.value
+        }
+        //Dollars to others currencies
+        else if(firstOption.value == 'USD')
+        {
+            if(secondOption.value == 'MXN')
+            {
+                result = (e.target.value * currencies.MXN).toFixed(2)
+            }
+            else if(secondOption.value == 'JPY')
+            {
+                result = (e.target.value * currencies.JPY).toFixed(2)
+            }
+            else if(secondOption.value == 'EUR')
+            {
+                result = (e.target.value * currencies.EUR).toFixed(2)
+            }
+            else if(secondOption.value == 'KRW')
+            {
+                result = (e.target.value * currencies.KRW).toFixed(2)
+            }
+        }
+        //Mexican Pesos to others currencies
+        else if(firstOption.value == 'MXN')
+        {
+            if(secondOption.value == 'USD')
+            {
+                result = (e.target.value / currencies.MXN).toFixed(2)
+            }
+            else if(secondOption.value == 'JPY')
+            {
+                result = (e.target.value * (currencies.JPY/currencies.MXN)).toFixed(2)
+            }
+            else if(secondOption.value == 'EUR')
+            {
+                result = (e.target.value * (currencies.EUR/currencies.MXN)).toFixed(2)
+            }
+            else if(secondOption.value == 'KRW')
+            {
+                result = (e.target.value * (currencies.KRW/currencies.MXN)).toFixed(2)
+            }
+        }
+        //Yen to others currencies
+        else if(firstOption.value == 'JPY')
+        {
+            if(secondOption.value == 'USD')
+            {
+                result = (e.target.value / currencies.JPY).toFixed(2)
+            }
+            else if(secondOption.value == 'MXN')
+            {
+                result = (e.target.value * (currencies.MXN/currencies.JPY)).toFixed(2)
+            }
+            else if(secondOption.value == 'EUR')
+            {
+                result = (e.target.value * (currencies.EUR/currencies.JPY)).toFixed(2)
+            }
+            else if(secondOption.value == 'KRW')
+            {
+                result = (e.target.value * (currencies.KRW/currencies.JPY)).toFixed(2)
+            }
+        }
+        //Euro to others currencies
+        else if(firstOption.value == 'EUR')
+        {
+            if(secondOption.value == 'USD')
+            {
+                result = (e.target.value / currencies.EUR).toFixed(2)
+            }
+            else if(secondOption.value == 'MXN')
+            {
+                result = (e.target.value * (currencies.MXN/currencies.EUR)).toFixed(2)
+            }
+            else if(secondOption.value == 'JPY')
+            {
+                result = (e.target.value * (currencies.JPY/currencies.EUR)).toFixed(2)
+            }
+            else if(secondOption.value == 'KRW')
+            {
+                result = (e.target.value * (currencies.KRW/currencies.EUR)).toFixed(2)
+            }
+        }
+        //Korean Won to others currencies
+        else if(firstOption.value == 'KRW')
+        {
+            if(secondOption.value == 'USD')
+            {
+                result = (e.target.value / currencies.KRW).toFixed(2)
+            }
+            else if(secondOption.value == 'MXN')
+            {
+                result = (e.target.value * (currencies.MXN/currencies.KRW)).toFixed(2)
+            }
+            else if(secondOption.value == 'JPY')
+            {
+                result = (e.target.value * (currencies.JPY/currencies.KRW)).toFixed(2)
+            }
+            else if(secondOption.value == 'EUR')
+            {
+                result = (e.target.value * (currencies.EUR/currencies.KRW)).toFixed(2)
+            }
         }
 
 
